@@ -27,8 +27,8 @@ float fh;
 if (argc==1)	//condition checking 
 	{
 		cout << " parse.exe" << endl;
-		cout << " enter values in command line" << endl << "char: a-z/ A-Z " << endl << "numbers(0-9)" << endl << "string group of characters" << endl;
-		cout << " float (real/ decimal numbers)" << endl;
+		cout << " argv[0] datatype1,datatype2,datatype3,....." << endl;
+		
 
 	}
 	else

@@ -58,7 +58,7 @@ cout<<"int"<< "\t"<<iJ<<"\t"<<sizeof(iJ)<<endl;		//prints the size of integer
 else
 cout<<"float"<< "\t"<<fh<<"\t"<<sizeof(fh)<<endl;	//prints the size of float
 }
-}
+} 
 return 0;
 }
 }

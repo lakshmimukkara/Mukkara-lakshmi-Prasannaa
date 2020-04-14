@@ -72,7 +72,7 @@ int main(int argc,char* argv[])
     {
         if(strcmp(argv[1],"-h")==0)     //created a help command
         {
-            cout<<"Enter an integer values "<<endl;
+            cout<<"Enter an integer value "<<endl;
         }
     }
     else

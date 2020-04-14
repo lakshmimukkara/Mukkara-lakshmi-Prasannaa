@@ -177,7 +177,6 @@ int main(int argc,char* argv[])
     {
         if(strcmp(argv[1],"-h")==0)     //created a help command
         {
-            cout<<"used to do certain file operations like add,update,delete and display using vector. Just select the option"<<" ";
             cout<<"Enter key a char and value as a string"<<endl;
         }
     }

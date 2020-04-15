@@ -1,4 +1,4 @@
-/*File Name     :main(1).cpp
+/*File Name     :Sum of Squares
   Author Name   :Mukkara Lakshmi Prasanna
   Created Date  :07-04-2020
   Description   :To know the uses of modifiers,variable scope and storage classes
@@ -16,11 +16,11 @@ if(argc == 1)	//Condition checks
  }
 	else
 	{
-		int in, isum = 0;		//Variable declaration
+		int inum, isum = 0;		//Variable declaration
 		cout << "Enter a positive integer: ";	// Enter a positive number
-   		 cin >> in;
+   		 cin >> inum;
 
-                 for (int i = 1; i <= in; ++i) 
+                 for (int i = 1; i <= inum; ++i) 
               {
                    isum += i*i;		//Add the Squares of n numbers
               }

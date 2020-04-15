@@ -1,4 +1,4 @@
-/*File Name     :case7.cpp
+/*File Name     :List of operations.cpp
   Author Name   :Mukkara Lakshmi Prasanna
   Created Date  :11-04-2020
   Description   :To perform the list of operations specified

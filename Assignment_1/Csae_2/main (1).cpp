@@ -1,4 +1,4 @@
-/*File Name     :Sum of Squares
+/*File Name     :Sum of Squares.cpp
   Author Name   :Mukkara Lakshmi Prasanna
   Created Date  :07-04-2020
   Description   :To know the uses of modifiers,variable scope and storage classes

@@ -1,4 +1,4 @@
-/*File Name     :case6.cpp
+/*File Name     :Operator.cpp
   Author Name   :Mukkara Lkshmi Parsanna
   Created Date  :07-04-2020
   Description   :To write a Display method to display int and char variables

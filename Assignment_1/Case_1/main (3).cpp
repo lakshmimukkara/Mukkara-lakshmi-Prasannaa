@@ -1,4 +1,4 @@
-/*File Name     :main(3).cpp
+/*File Name     :Datatypes
   Author Name   :Mukkara LAkshmi Prasanna
   Created Date  :06-04-2020
   Description   :To know the us
@@ -13,17 +13,17 @@
 using namespace std;
 bool check(string str)
 {
-int im;		//variable declaraion
-for(im=0;str.length()==1;im++)		//initializing the value, condition checking,value incremented
+int iNumber;		//variable declaraion
+for(iNumber=0;str.length()==1;iNumber++)		//initializing the value, condition checking,value incremented
 {
 return true;	
 }
 }	
 int main(int argc,char **argv)
 {
-int iN;
-int iJ;		// Variable declaration
-float fh; 
+int iNum;
+int iNum1;		// Variable declaration
+float fNUMB; 
 if (argc==1)	//condition checking 
 	{
 		cout << " parse.exe" << endl;
@@ -34,29 +34,29 @@ if (argc==1)	//condition checking
 	else
 	{
 	
-for(iN=1;iN<argc;iN++)
+for(iNum=1;iNum<argc;iNum++)
 {
-iJ=atoi(argv[iN]);	//function accepts string and converts to integer
-fh=atof(argv[iN]);	//function to convert to a double
-if(iJ==0)	//condition checks by doing comparision
+iNum1=atoi(argv[iNum]);	//function accepts string and converts to integer
+fNUMB=atof(argv[iNum]);	//function to convert to a double
+if(iNum1==0)	//condition checks by doing comparision
 {
-	if(check(argv[iN]))
+	if(check(argv[iNum]))
 	{
 	cout<<"char";	//print character
-	cout<<"\t"<<argv[iN]<< "\t"<<strlen(argv[iN])<<endl;
+	cout<<"\t"<<argv[iNum]<< "\t"<<strlen(argv[iNum])<<endl;
 	}
 	else
 	{
 	cout<<"string";	  //prints string
-	cout<<"\t"<<argv[iN]<< "\t"<<strlen(argv[iN])<<endl;
+	cout<<"\t"<<argv[iNum]<< "\t"<<strlen(argv[iNum])<<endl;
 	}
 }
 else
 {
-if(iJ==fh)
-cout<<"int"<< "\t"<<iJ<<"\t"<<sizeof(iJ)<<endl;		//prints the size of integer
+if(iNum1==fNUMB)
+cout<<"int"<< "\t"<<iNum1<<"\t"<<sizeof(iNum1)<<endl;		//prints the size of integer
 else
-cout<<"float"<< "\t"<<fh<<"\t"<<sizeof(fh)<<endl;	//prints the size of float
+cout<<"float"<< "\t"<<fNUMB<<"\t"<<sizeof(fNUMB)<<endl;	//prints the size of float
 }
 } 
 return 0;

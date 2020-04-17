@@ -9,8 +9,10 @@
 #include<typeinfo>
 using namespace std;
 
-unsigned iNum=75;    //unsigned global variable intially holds 75
-signed int iNum1=90; //signed int initially holds 90
+unsigned iNum=75;    
+/*unsigned global variable intially holds 75*/
+signed int iNum1=90; 
+/*signed int initially holds 90*/
 
 /*Function Name :test_function_storage
   Parameters    :no parameter
@@ -19,18 +21,23 @@ signed int iNum1=90; //signed int initially holds 90
 
 void test_function_storage()
 {
-    auto Auto_Num="NEW";   //automatic variable
-    long double fCount;         //long double modifier
+    auto Auto_Num="NEW";   
+    /*automatic variable*/
+    long double fCount;   
+    /*long double modifier*/
     cout<<"Enter the double value:";
     cin>>fCount;
-    static int iStatic_Num;    //static variable, initially holds 0
-    register int iRegister_Num;    //register variable, always starts freshly
+    static int iStatic_Num;    
+    /*static variable, initially holds 0*/
+    register int iRegister_Num;    
+    /*register variable, always starts freshly*/
     cout<<"Enter the Register variable:";
     cin>>iRegister_Num;
     iStatic_Num=iStatic_Num+iRegister_Num*2;
     for(int iStart=0;iStart<fCount;iStart++)
     {
-        iStatic_Num++;//it only increments,it contains value where it is left till the end of program
+        iStatic_Num++;
+        /*it only increments,it contains value where it is left till the end of program*/
     }
     cout<<endl;
     cout<<"Global Variables:"<<endl;
@@ -52,7 +59,8 @@ void test_function_storage()
 
 void type_modifiers()
 {
-    unsigned iNum;  //if it was not given with correct sign it gives garbage value
+    unsigned iNum;  
+    /*if it was not given with correct sign it gives garbage value*/
     cout<<"Enter a unsigned Number:";
     cin>>iNum;
     signed int iNum1;
@@ -70,7 +78,8 @@ int main(int argc,char* argv[])
 {
     if(argc>=2)
     {
-        if(strcmp(argv[1],"-h")==0)     //created a help command
+        if(strcmp(argv[1],"-h")==0)     
+         /*created a help command*/
         {
             cout<<"Just enter different values as mentioned and observe the output"<<endl;
         }

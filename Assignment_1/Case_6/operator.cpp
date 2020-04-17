@@ -12,13 +12,16 @@ using namespace std;
 class Student{
 private:
     int *iRoll_no;
-    char cName[20]; //Variable Declaration
+    char cName[20]; 
+  /*Variable Declaration*/
 public:
-    Student()   //Default Constructor
+    Student()   
+      /*Default Constructor*/
     {
         cout<<"Constructor is Invoked"<<endl;
     }
-    Student(int *i_no,char *cname)  //Parameterized Constructor
+    Student(int *i_no,char *cname) 
+      /*Parameterized Constructor*/
     {
         cout<<"Parameterized Constructor is Invoked"<<endl;
         iRoll_no=i_no;
@@ -47,7 +50,8 @@ public:
         cout<<endl;
     }
 
-    void operator ++()  //increment operator overloading
+    void operator ++()  
+      /*increment operator overloading*/
     {
         ++(*iRoll_no);
     }
@@ -61,7 +65,8 @@ int main(int argc,char* argv[])
 {
     if(argc>=2)
     {
-        if(strcmp(argv[1],"-h")==0)     //created a help command
+        if(strcmp(argv[1],"-h")==0)     
+          /*created a help command*/
         {
             cout<<"used to display private variable int* and char[20], enter one int and char variables"<<endl;
         }
@@ -82,7 +87,8 @@ int main(int argc,char* argv[])
         cout<<"After Operator Overloading"<<endl;
         ++obj2;     //calling of increment operator overloading
         cout<<"Using Member Function"<<endl;
-        obj.Assign_Value(&iVal,cNm);    //calling of member function
+        obj.Assign_Value(&iVal,cNm);    
+        /*calling of member function*/
         obj.display();
     }
     return 0;

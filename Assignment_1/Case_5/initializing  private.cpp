@@ -1,5 +1,5 @@
 /*File Name     :initializing private.cc
-  Author Name   :Rajyalakshmi
+  Author Name   :M Lakshmi prasanna
   Created Date  :09-04-2020
   Description   :To know different ways to initialize private members of a class
   Requirements  :#include<iostream>,#include<string.h>*/
@@ -17,8 +17,8 @@ public:
     Test()
     {
         cout<<"Default Constructor is Invoked"<<endl;
-        iNum1=100;
-        iNum2=200;
+        iNum1=200;
+        iNum2=400;
     }
     Test(int iX,float iY)
     {

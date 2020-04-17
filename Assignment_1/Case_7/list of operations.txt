@@ -8,7 +8,8 @@
 
 
 #include<iostream>
-#include<vector>    //including the container
+#include<vector>   
+/*including the container*/
 #include<fstream>
 #include<stdio.h>
 #include<string.h>
@@ -76,9 +77,12 @@ public:
 int searchupdate(vector<student> &std,char cOption)
 {
     student s;
-    vector<student>:: iterator it;  //iterator creation to go word to word in file
-    ofstream outfile("notes.ini",ios::trunc|ios::out|ios::binary);  //inorder to write updated value opened in write mode
-    for(it=std.begin();it!=std.end();it++)  //iterating to contents stored in vector
+    vector<student>:: iterator it;  
+    /*iterator creation to go word to word in file*/
+    ofstream outfile("notes.ini",ios::trunc|ios::out|ios::binary);  
+    /*inorder to write updated value opened in write mode*/
+    for(it=std.begin();it!=std.end();it++) 
+    /*iterating to contents stored in vector*/
     {
         s=*it;
         if(s.outkey()==cOption)
@@ -88,7 +92,8 @@ int searchupdate(vector<student> &std,char cOption)
             s.getvalue();
             std.push_back(s);
             for(it=std.begin();it!=std.end();it++)
-                outfile.write((char*)&(*it),sizeof(s));     //the file again written with updated values
+             outfile.write((char*)&(*it),sizeof(s));     
+             /*the file again written with updated values*/
             outfile.close();
             return 1;
         }
@@ -109,12 +114,14 @@ void addtofile(vector<student> &std)
     {
         ofstream outfile("notes.ini",ios::trunc|ios::out|ios::binary);
         s.getkey();
-        if(searchupdate(std,s.outkey())==1) //checking for if the key is already present in the file or not
+        if(searchupdate(std,s.outkey())==1) 
+        /*checking for if the key is already present in the file or not*/
             cout<<"updated"<<endl;
         else
         {
             s.getvalue();
-            std.push_back(s);   //all new entries has been pushed backed
+            std.push_back(s);   
+            /*all new entries has been pushed backed*/
             for(it=std.begin();it!=std.end();it++)
             outfile.write((char*)&(*it),sizeof(s));
         }
@@ -143,7 +150,8 @@ void deletefromfile(vector<student> &std)
         if(s.outkey()==ckey)
             std.erase(it);
     }
-    if(outfile.eof())   //checking if the file is empty
+    if(outfile.eof())   
+    /*checking if the file is empty*/
     {
         cout<<"The file Empty and is being removed"<<endl;
         remove("notes.ini");
@@ -164,8 +172,10 @@ void showfromfile()
     ifstream in("notes.ini",ios::in|ios::binary);
     while(1)
     {
-        in.read((char*)&s,sizeof(s));   //reading the contents in file
-        if(in.eof())break;  //checking for end of the file
+        in.read((char*)&s,sizeof(s));   
+        /*reading the contents in file /*
+        if(in.eof())break;  
+        /*checking for end of the file /*
             s.display();
     }
     in.close();
@@ -175,7 +185,8 @@ int main(int argc,char* argv[])
 {
     if(argc>=2)
     {
-        if(strcmp(argv[1],"-h")==0)     //created a help command
+        if(strcmp(argv[1],"-h")==0)   
+        /*created a help command /*
         {
             cout<<"used to do certain file operations like add,update,delete and display using vector. Just select the option"<<" ";
             cout<<"Enter key a char and value as a string"<<endl;

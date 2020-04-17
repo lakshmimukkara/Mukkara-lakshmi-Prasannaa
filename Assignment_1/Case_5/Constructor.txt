@@ -12,11 +12,13 @@ using namespace std;
 class Test
 {
 public:
-    Test()  	//Default Constructor
+    Test()
+    /*Default Constructor*/
     {
         cout<<"Test Class Constructor is Invoked"<<endl;
     }
-    ~Test()	//Destructor
+    ~Test()	
+    /*Destructor*/
     {
         cout<<"Test Class Destructor is Invoked"<<endl;
     }
@@ -26,12 +28,14 @@ public:
 class Base
 {
 public:
-    Test ob;    //Test class object in another class
+    Test ob;    
+    /*Test class object in another class*/
     Base()	//Default Constructor
     {
         cout<<"Base Class Constructor is Invoked"<<endl;
     }
-    ~Base()	//Destructor
+    ~Base()	
+    /*Destructor*/
     {
         cout<<"Base Class Destructor is Invoked"<<endl;
     }
@@ -44,11 +48,13 @@ public:
 class Derived:public Base
 {
 public:
-    Derived()	//Default Constructor
+    Derived()	
+    /*Default Constructor*/
     {
         cout<<"Derived Class Constructor is Invoked"<<endl;
     }
-    virtual ~Derived()	//Virtual Destructor
+    virtual ~Derived()	
+    /*Virtual Destructor*/
     {
         cout<<"Derived Class Destructor is Invoked"<<endl;
     }
@@ -57,11 +63,13 @@ public:
 class Derived1:public Base,Derived
 {
 public:
-    Derived1()	//Default Constructor
+    Derived1()	
+    /*Default Constructor*/
     {
         cout<<"Derived1 Class Constructor is Invoked"<<endl;
     }
-    ~Derived1()		//Destructor
+    ~Derived1()		
+    /*Destructor*/
     {
         cout<<"Derived1 Class Destructor is Invoked"<<endl;
     }
@@ -71,7 +79,8 @@ int main(int argc,char* argv[])
 {
     if(argc>=2)
     {
-        if(strcmp(argv[1],"-h")==0)     //created a help command
+        if(strcmp(argv[1],"-h")==0)     
+        /*created a help command*/
         {
             cout<<"Used to know the order of constructors and destructors, no need to give any input"<<endl;
         }

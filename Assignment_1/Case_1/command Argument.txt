@@ -1,0 +1,77 @@
+/*File Name     :Command Arguments.cpp
+		
+Author Name   :Mukkara Lakshmi Prasanna
+		
+Created Date  :06-04-2020
+		
+Description   :To know the use of command line arguments with data types
+		
+Requirements  :#include<iostream>,#include<string.h>,#include<stdlib.h>
+		
+*/
+
+#include<iostream>
+#include<string.h>
+#include<stdlib.h>
+using namespace std;
+int TypeCheck(char *argv)
+/*Function to check the datatype of Arguments*/
+{
+	 
+			int iINTEGER=atoi(argv);
+			/*Here atoi function converts string to int*/
+		    if(iINTEGER==0)									
+		    {
+			    if(strlen(argv)==1)
+			    {
+				    cout<<endl<<"\t char";
+				    cout<<"\t\t"<<argv<<"\t\t"<<strlen(argv);
+			    }
+				else
+				{
+				    cout<<endl<<"\t string";
+				    cout<<"\t\t"<< argv<<"\t\t"<<sizeof(argv);
+		        }
+	        }
+		    
+			else
+			/*else case for displaying int and float values*/
+		    {
+			    float fFLOAT=atof(argv);
+			    /* Here atof function converts string to double*/
+			    if(iINTEGER==fFLOAT)
+			    {
+			        
+				    cout<<endl<<"\t int"<<"\t\t"<<iINTEGER<<"\t\t"<<sizeof(iINTEGER);
+			    }
+			    else
+				    cout<<endl<<"\t float"<<"\t\t"<<fFLOAT<<"\t\t"<<sizeof(fFLOAT)<<endl;
+		}
+		}
+int main(int argc,char **argv)
+{
+	if((argc==2)&&(strcmp(argv[1],"-h")==0))
+	{
+	/*  if loop for comparing the input string with "-h" and displaying the usage	*/
+	    	/*   if(strcmp(argv[1],"-h")==0)  */               
+	    	{
+	    		cout<<"      Parser.exe          "<<endl;
+				cout<<"argv[0] ,datatype1 , datatype2 ,...., datatypeN "<<endl; 
+	    	}
+	}
+	else if(argc==1)
+	{
+		cout<<"In Command Line Arguments press -h to display "<<endl;
+	}
+	
+	else 
+	{
+		cout<<"\t Data type"<<"\t"<<"\t Value"<<"\t"<<"\t Size"<<endl;
+		for(int i=1;i<argc;i++)                         
+		{
+			
+			TypeCheck(argv[i]);
+		}
+	}
+	
+}

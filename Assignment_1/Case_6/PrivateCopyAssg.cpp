@@ -1,3 +1,9 @@
+/*File Name :PrivatecopyAssg.cpp
+Author      : M .LAkshmi Prasanna
+Purpose     : To calculate the sum of squares of a given numbers
+Date        : 07/04/2020
+*/
+
 #include<iostream>
 #include<string.h>
 

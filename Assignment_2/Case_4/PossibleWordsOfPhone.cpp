@@ -1,3 +1,11 @@
+/*Filename       : Possible Words of phone.cpp
+Author           : Lakshmi prasanna Mukkara
+Date of creation : 09-05-2020
+Description      : Print the possible words of give numbers of phone keypad
+*/
+
+
+
 #include <iostream>
 #include <string.h>
 using namespace std;

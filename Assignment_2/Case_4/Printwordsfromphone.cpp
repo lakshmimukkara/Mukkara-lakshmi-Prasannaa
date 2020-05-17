@@ -107,25 +107,20 @@ int main(int argc, char *argv[])
 
 		int inumber[] = {2, 3};
 		cout <<"... Print the possble combinations of different numbers ..."<<endl; 
-        cout<<" ...Here i entered 2 and 3..."<<endl;
-	    cout<<" ______________________________"<<endl;
-	    cout<<" |    1   |  2(abc)  | 3(def) |"<<endl; 
-	    cout<<" |________|__________|________|"<<endl;
-	    cout<<" | 4(ghi) |  5(jkl)  | 6(mno) |"<<endl; /* This is the format of keypad  phone */
-	    cout<<" |________|__________|________|"<<endl;
-        cout<<" | 7(pqrs)|  8(tuv)  |9(wxyz) |"<<endl;
-        cout<<" |________|__________|________|"<<endl;
-        cout<<" |    *   |    0     |   #    |"<<endl; 
-        cout<<" |________|__________|________|"<<endl;
-
-		cout << "The output character formed is : \n";
-
-		int iN = sizeof(inumber) / sizeof(inumber[0]);
-
-		printWords(inumber, iN);
-
-		return 0;
-
-	}
+        	cout<<" ...Here i entered 2 and 3..."<<endl;
+	    	cout<<" ______________________________"<<endl;
+	    	cout<<" |    1   |  2(abc)  | 3(def) |"<<endl; 
+	    	cout<<" |________|__________|________|"<<endl;
+	    	cout<<" | 4(ghi) |  5(jkl)  | 6(mno) |"<<endl; /* This is the format of keypad  phone */
+	    	cout<<" |________|__________|________|"<<endl;
+       	    	cout<<" | 7(pqrs)|  8(tuv)  |9(wxyz) |"<<endl;
+            	cout<<" |________|__________|________|"<<endl;
+            	cout<<" |    *   |    0     |   #    |"<<endl; 
+            	cout<<" |________|__________|________|"<<endl;
+	    	cout << "The output character formed is : \n";
+	    	int iN = sizeof(inumber) / sizeof(inumber[0]);
+	    	printWords(inumber, iN);
+	    	return 0;
+        }
 
 }

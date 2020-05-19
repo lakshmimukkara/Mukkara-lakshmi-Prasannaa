@@ -1,3 +1,8 @@
+/*Filename       : DataEncryptDecrypt.cpp
+Author           : Lakshmi prasanna Mukkara
+Date of creation : 19-05-2020
+Description      : Encrypt the data and saved and also decrypt using key
+*/
 #include <iostream>
 #include <string.h>
 #include <bits/stdc++.h>
@@ -13,11 +18,11 @@ void DataEncDec::encrypt(char *Filename)
 {
 	string str;
 	ifstream myfile;
-	/ifstream is used to read the file/
-	myfile.open("sam.txt");
+	/*ifstream is used to read the file*/
+	myfile.open("sample.txt");
 	/*filename to encrypt the data */
 	ofstream outfile;
-	/ofstream is used to write in a file/
+	/*ofstream is used to write in a file*/
 	outfile.open("encrypt.txt");
 	outfile << key << Filename << endl;
 	while (getline(myfile, str))
@@ -62,11 +67,11 @@ void DataEncDec::decrypt(char *key)
 {
 	string str;
 	ifstream myfile;
-	/ifstream is used to read the file/
+	/*ifstream is used to read the file*/
 	myfile.open("encrypt.txt");
 	/*filename to encrypt the data */
 	ofstream outfile;
-	/ofstream is used to write in a file/
+	/*ofstream is used to write in a file*/
 	outfile.open("decrypt.txt");
 	getline(myfile, str);
 	if (key == str)

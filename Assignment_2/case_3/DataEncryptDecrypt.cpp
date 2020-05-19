@@ -50,11 +50,11 @@ void DataEncDec::encrypt(char *Filename)
 				/* Pointer to the first character of the next word */
 			}
 		}
-		for (int k = 0; k < str.length(); k++)
+		for (int line = 0; line < str.length(); line++)
 
-			if (str[k] == ' ')
+			if (str[line] == ' ')
 			{
-				str[k] = '*';
+				str[line] = '*';
 			}
 		/* space(' ') has been replaced with star(*) */
 		outfile << str << endl;
@@ -102,12 +102,12 @@ void DataEncDec::decrypt(char *key)
 					/* Pointer to the first character of the next word */
 				}
 			}
-			for (int k = 0; k < str.length(); k++)
+			for (int line = 0; line < str.length(); line++)
 
-				if (str[k] == '*')
+				if (str[line] == '*')
 
 				{
-					str[k] = ' ';
+					str[line] = ' ';
 				}
 			/* star(*) has been replaced with space(' ') */
 			outfile << str;
